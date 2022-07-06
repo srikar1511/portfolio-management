@@ -1,0 +1,35 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8585/eureka
+logging:
+  level:
+    com:
+      cognizant: debug
+    org:
+      hibernate:
+        SQL: trace
+        type:
+          descriptor:
+            sql: trace
+      springframework: info
+  pattern:
+    console: '%d{dd-MM-yy} %d{HH:mm:ss.SSS} %-20.20thread %5p %-25.25logger{25} %25M
+      %4L %m%n'
+server:
+  port: 8090
+spring:
+  application:
+    name: ShareDetailsService
+  datasource:
+    driverClassName: org.h2.Driver
+    password: ''
+    url: jdbc:h2:mem:testdb
+    username: sa
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect

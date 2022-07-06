@@ -1,0 +1,12 @@
+server:
+  port: 8245
+
+
+eureka:
+   client:
+      service-url:
+       
+
+swagger:
+  config:
+    refreshrate: 5000
